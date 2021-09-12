@@ -82,7 +82,7 @@ input[type="text"]{
     width: 95%;
     height: 90%;
     transform: scaleY(0);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     border-radius: 30px;
     color: #FFB400;
     box-shadow: 0 0 20px rgb(0 0 0 / 90%);
