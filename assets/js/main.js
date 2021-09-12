@@ -1,0 +1,2 @@
+// Events
+form.onsubmit = createUrl;

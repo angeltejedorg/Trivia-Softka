@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
+
+
+.main-info {
+    margin: 10px;
+    background-color: black;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 90%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #FFB400;
+
+}
+
+.container  h1 {
+    color: #FFB400;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+
+}
+
+.user-selection {
+    margin-bottom: 25px;
+}
+
+select {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #111;
+    background-color: #252525;
+    color: #ffffffa1;
+    padding: 8px 5px;
+    border-radius: 10px;
+    outline: none;
+    transition: .3s;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 12px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 25px;
+    /* border: 1px solid #111; */
+    background-color: #FFB400;
+    color: #ffffff;
+    border-radius: 10px;
+    outline: none;
+    transition: .3s;
+    font-family: 'Poppins', sans-serif; 
+    color: black;
+    font-weight: 600;
+}
+
+input[type="text"]{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #111;
+    background-color: #252525;
+    color: #ffffff;
+    padding: 8px 5px;
+    border-radius: 10px;
+    outline: none;
+    transition: .3s;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 12px;
+
+}
+
+.trivia-questions {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    width: 95%;
+    height: 90%;
+    transform: scaleY(0);
+    transition: all 0.4s ease;
+    border-radius: 30px;
+    color: #FFB400;
+    box-shadow: 0 0 20px rgb(0 0 0 / 90%);
+    
+}
+
+.button-answer {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 15px;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    background-color: black;
+    color: #FFB400;
+    border: 1px solid #FFB400;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+    margin-top: 50px;
+
+}
+
+.button-answer:hover {
+    background-color: #FFB400;
+    color: black;
+
+}
+
+.bg-wrong {
+    background-color: red;
+    color: #ffffff;
+    border: 1px solid red;
+   
+}
+.bg-wrong:hover {
+    background-color: red;
+    color: #ffffff;
+    border: 1px solid red;
+}
+
+
+.bg-right {
+    background-color: green;
+    color: #ffffff;
+    border: 1px solid green;
+}
+
+.bg-right:hover {
+    background-color: green;
+    color: #ffffff;
+    border: 1px solid green;
+
+}
+
+
+.question-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 60%;
+    transition: all 0.3s ease-in-out;
+    /* background-color: blue; */
+    margin: 0 auto;
+}
+.question-item h2 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30;
+    /* background-color: red; */
+}
+
+.question-item ul {
+    display: flex;
+    flex-wrap: wrapx;    
+}
+
+.question-item h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30;
+   }
+
+/* .question-item h1 span {
+    color:#FFB400;
+} */
+
+.play-button {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    background-color: black;
+    color: #FFB400;
+    border: 1px solid #FFB400;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+    margin-top: 30px;
+    
+}
+
+.play-button:hover {
+    background-color: #FFB400;
+    color: black;
+
+}
+
+@media (max-width: 575px){
+
+    .main-info {
+        width: 80% !important;
+    }
+
+    .question-item ul { 
+        flex-direction: column;
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    .button-answer { 
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    
+    }
+}
