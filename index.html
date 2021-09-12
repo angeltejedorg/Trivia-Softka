@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <title>Trivia</title>
+</head>
+<body>
+    <div class="container d-flex justify-center align-center direction-column">
+        <h1 class="upper-text">trivia</h1>
+        <div class="main-info col-3">
+            <form action="" id="main-form">
+                <div class="user-selection">
+                    <label for="amount">Number of questions:</label>
+                    <input type="text" id="amount" name="amount" required>
+                    </select> 
+                </div>
+                <div class="user-selection">
+                    <label for="category">Select category:</label>
+                    <select name="category" id="category" value="0"> 
+                        <option value="0">Any Category</option>
+			            <option value="9">General Knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="13">Entertainment: Musicals &amp; Theatres</option>
+                        <option value="14">Entertainment: Television</option>
+                        <option value="15">Entertainment: Video Games</option>
+                        <option value="16">Entertainment: Board Games</option>
+                        <option value="17">Science &amp; Nature</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="19">Science: Mathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="24">Politics</option>
+                        <option value="25">Art</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                        <option value="29">Entertainment: Comics</option>
+                        <option value="30">Science: Gadgets</option>
+                        <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+                        <option value="32">Entertainment: Cartoon &amp; Animations</option>   
+                    </select>   
+                </div>
+                <div class="user-selection">
+                    <label for="difficulty">Select difficulty:</label>
+                    <select name="difficulty" id="difficulty">
+                        <option value="0">Any Difficulty</option>
+                        <option value="easy">Easy</option>  
+                        <option value="medium">Medium</option>  
+                        <option value="hard">Hard</option>  
+                    </select>   
+                </div>
+                <div class="user-selection">
+                    <label for="type">Select type:</label>
+                    <select name="type" id="type">    
+                        <option value="0">Any Type</option>
+                        <option value="multiple">Multiple Choice</option>  
+                        <option value="boolean">True/False</option>
+                    </select>   
+                </div>
+                <input type="submit" value="Let's Go!" class="go-btn">
+            </form>
+        </div>
+
+        <div class="trivia-questions" id="question-container">
+
+        </div>
+    </div>
+    
+    
+
+    <script src="assets/js/trivia.js"></script>
+</body>
+</html>
