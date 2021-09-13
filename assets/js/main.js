@@ -49,7 +49,7 @@ const startGame = e => {
 }
 const getQuestions = (resultAPI) => {
     questionsAPI = resultAPI;
-    console.log(questionsAPI)
+    // console.log(questionsAPI)
     showQuestion();
 }
 
@@ -87,7 +87,7 @@ const showContainerQuestion = () => {
 }
 
 const handleCheckAnswer = button => {
-    console.log(n)
+    // console.log(n)
     
     if (button.innerText === questionsAPI[n].correct_answer) {
         // button.classList.remove("button-answer")
@@ -98,7 +98,7 @@ const handleCheckAnswer = button => {
     }
     else {
         button.classList.add("bg-wrong")
-        setTimeout(nextQuestion, 500);
+        setTimeout(gameOver, 500);
 
     }
 }
@@ -124,7 +124,6 @@ const nextQuestion = () => {
 
 const showScore = () => {
     
-    // if (score >= 70) {
         questionContainer.innerHTML = `
         <div class="question-item">
         <h1>Your score for round ${roundCount} is </h1>
@@ -139,23 +138,56 @@ const nextRound = () => {
     
     roundCount++;
     n=0;
-    if (roundCount>5) {
+    if (roundCount<=5) {
         let firstRound = myURL(roundsCategory[roundCount])
         fetchDataAPI(firstRound);
     }
 
     else {
         questionContainer.innerHTML = ""
-        showHistory();
+        gameOver();
     }
     
 
 }
 
-const showHistory = () => {
-    
+const saveData = () => {
+    let namePlayer = document.getElementById("player").value;
+    let myScore = new Object();
+    myScore.name = namePlayer;
+    myScore.score = score;
+    localStorage.setItem(namePlayer, JSON.stringify(myScore))
 }
 
+const getScores = () => {
+    var values = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
 
+    while ( i-- ) {
+        values.push( JSON.parse(localStorage.getItem(keys[i])) );
+    }
+
+    return values;
+}
+
+let scoreHistory = getScores();
+
+
+const gameOver = () => {
+    saveData();
+    questionContainer.innerHTML = `
+    <div class="question-item">
+    <h1>GAME ENDED</h1>
+    <h2>Your total score was ${score} points</h1>
+    <h2>Wanna play again?</h1>
+    <button onclick="playAgain()" class="play-button">Play again!</button>
+    </div>
+    `   
+}
+
+const playAgain = () => {
+    window.location.reload();
+}
 // // Events
 form.onsubmit = startGame;
