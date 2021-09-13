@@ -12,11 +12,11 @@ const questionContainer = document.getElementById("question-container");
 let rounds = [];
 let roundCount = 1;
 const roundsCategory =  {
-    1: "23",
-    2: "9",
-    3: "22",
-    4: "18",
-    5: "19"
+    1: "9", //General Knowledge
+    2: "23", //History
+    3: "22", //Geography
+    4: "18", //Science: Computers
+    5: "19" // Science: Mathematics
 };
 
 const roundsScore = {
