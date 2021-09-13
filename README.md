@@ -10,3 +10,4 @@ Proyecto desarrollado con javascript, maquetado con html y estilizado con css.
     Round 4:Science: Computers -- 500 pts por pregunta
     Round 5: Science: Mathematics -- 1000 pts por pregunta
 
+Se encuentra desplegado en una pagina web: https://reto-softka-angel.vercel.app/
