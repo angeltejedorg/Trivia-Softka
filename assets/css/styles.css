@@ -167,11 +167,16 @@ input[type="text"]{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 30;
+    color:#ffffff
    }
 
-/* .question-item h1 span {
+.question-item h1 span {
     color:#FFB400;
-} */
+}
+
+.question-item h2 span {
+    color:#ffffff;
+}
 
 .play-button {
     padding: 10px 30px;

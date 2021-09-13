@@ -126,8 +126,8 @@ const showScore = () => {
     
         questionContainer.innerHTML = `
         <div class="question-item">
-        <h1>Your score for round ${roundCount} is </h1>
-        <h2>${score} points</h1>
+        <h1>Your <span>score</span> so far is: </h1>
+        <h2>${score} <span>points</span></h1>
         <h2>Ready for next round?</h1>
         <button onclick="nextRound()" class="play-button">Next round</button>
         </div>
@@ -178,9 +178,9 @@ const gameOver = () => {
     saveData();
     questionContainer.innerHTML = `
     <div class="question-item">
-    <h1>GAME ENDED</h1>
-    <h2>Your total score was ${score} points</h1>
-    <h2>Wanna play again?</h1>
+    <h1>GAME <span>ENDED</span></h1>
+    <h2>Your total socre was <span>${score} points</span></h1>
+    <h2><span>Wanna</span> play again?</h1>
     <button onclick="playAgain()" class="play-button">Play again!</button>
     </div>
     `   
